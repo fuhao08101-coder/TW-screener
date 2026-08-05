@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>乖離掃描 · TW Screener</title>
+<style>
+  :root{
+    --bg:#0b0e11;
+    --panel:#12161c;
+    --line:#232830;
+    --text:#e7e9ec;
+    --muted:#7a8290;
+    --up:#e05656;
+    --down:#2fae6b;
+    --gold:#d4a72c;
+    --mono: "SFMono-Regular","Consolas","Liberation Mono",monospace;
+    --sans: -apple-system,"Segoe UI",Roboto,"PingFang TC","Microsoft JhengHei",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--sans); -webkit-font-smoothing:antialiased;
+    padding-bottom:40px;
+  }
+  header{
+    position:sticky; top:0; z-index:5;
+    background:linear-gradient(180deg,#0d1116,#0b0e11 90%);
+    border-bottom:1px solid var(--line);
+    padding:16px 18px 12px;
+  }
+  .eyebrow{
+    display:flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+    color:var(--muted); text-transform:uppercase;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--down);
+    box-shadow:0 0 8px var(--down); animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{margin:6px 0 4px; font-size:22px; font-weight:700; letter-spacing:-.01em;}
+  .sub{color:var(--muted); font-size:13px; font-family:var(--mono);}
+  .params{
+    margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;
+  }
+  .chip{
+    font-family:var(--mono); font-size:11px; color:var(--text);
+    background:var(--panel); border:1px solid var(--line);
+    padding:4px 8px; border-radius:20px;
+  }
+  main{padding:14px;}
+  .empty{
+    text-align:center; color:var(--muted); padding:60px 20px;
+    font-family:var(--mono); font-size:13px; line-height:1.7;
+  }
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; padding:14px 16px; margin-bottom:10px;
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .left{min-width:0;}
+  .ticker-row{display:flex; align-items:baseline; gap:8px;}
+  .ticker{font-family:var(--mono); font-weight:700; font-size:15px;}
+  .name{color:var(--muted); font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .meta{
+    margin-top:6px; font-family:var(--mono); font-size:11.5px; color:var(--muted);
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .meta b{color:var(--text); font-weight:600;}
+  .right{text-align:right; flex-shrink:0;}
+  .bias{
+    font-family:var(--mono); font-weight:700; font-size:17px;
+    padding:3px 10px; border-radius:8px; display:inline-block;
+  }
+  .bias.up{color:var(--up); background:rgba(224,86,86,.12);}
+  .bias.down{color:var(--down); background:rgba(47,174,107,.12);}
+  .bias-date{margin-top:6px; font-family:var(--mono); font-size:10.5px; color:var(--muted);}
+  footer{
+    text-align:center; color:var(--muted); font-family:var(--mono);
+    font-size:11px; padding:24px 20px 10px; line-height:1.8;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow"><span class="dot"></span><span id="status-text">連線中</span></div>
+  <h1>乖離率掃描</h1>
+  <div class="sub" id="asof">最後更新:—</div>
+  <div class="params" id="params"></div>
+</header>
+
+<main id="main">
+  <div class="empty">資料載入中…</div>
+</main>
+
+<footer>
+  條件:近 N 交易日內 15MA 乖離觸及門檻,且還原日K收盤 &gt; SMA87<br>
+  資料源:公開行情,僅供研究參考,非投資建議
+</footer>
+
+<script>
+async function load(){
+  const main = document.getElementById('main');
+  try{
+    const res = await fetch('results.json?_=' + Date.now());
+    const data = await res.json();
+
+    document.getElementById('status-text').textContent = '已連線';
+    document.getElementById('asof').textContent = '最後更新:' + data.generated_at + '(共 ' + data.count + ' 檔)';
+
+    const p = data.params;
+    document.getElementById('params').innerHTML = `
+      <span class="chip">近${p.lookback_days}交易日</span>
+      <span class="chip">${p.bias_ma}MA 乖離 ≥ ${p.bias_threshold}%</span>
+      <span class="chip">收盤 &gt; SMA${p.long_ma}</span>
+    `;
+
+    if(!data.results.length){
+      main.innerHTML = '<div class="empty">今天沒有符合條件的股票。<br>條件門檻可在 screener.py 調整。</div>';
+      return;
+    }
+
+    main.innerHTML = data.results.map(r => {
+      const isUp = r.bias_pct > 0;
+      return `
+        <div class="card">
+          <div class="left">
+            <div class="ticker-row">
+              <span class="ticker">${r.ticker.replace('.TW','').replace('.TWO','')}</span>
+              <span class="name">${r.name}</span>
+            </div>
+            <div class="meta">
+              <span>收盤 <b>${r.close}</b></span>
+              <span>SMA87 <b>${r.ma87}</b></span>
+              <span>${r.market}</span>
+            </div>
+          </div>
+          <div class="right">
+            <div class="bias ${isUp ? 'up' : 'down'}">${isUp ? '+' : ''}${r.bias_pct}%</div>
+            <div class="bias-date">${r.bias_date}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+  }catch(e){
+    document.getElementById('status-text').textContent = '尚無資料';
+    main.innerHTML = '<div class="empty">還沒有掃描結果。<br>請先讓 GitHub Actions 跑過一次,<br>或手動觸發 workflow。</div>';
+  }
+}
+load();
+</script>
+
+</body>
+</html>
