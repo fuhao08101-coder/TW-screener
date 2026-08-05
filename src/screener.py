@@ -15,7 +15,7 @@ LOOKBACK_DAYS = 10        # 「10個交易日內」
 BIAS_MA_PERIOD = 15       # 15MA
 BIAS_THRESHOLD = 20.0     # 乖離 20%
 LONG_MA_PERIOD = 87       # SMA87
-BIAS_DIRECTION = "both"   # "up"=只抓正乖離(急漲) / "down"=只抓負乖離(急跌) / "both"=兩者都抓
+BIAS_DIRECTION = "up"   # "up"=只抓正乖離(急漲) / "down"=只抓負乖離(急跌) / "both"=兩者都抓
 HISTORY_PERIOD = "1y"     # 抓多久的歷史資料來算 MA(87MA需要至少87根+緩衝)
 REQUEST_SLEEP = 0.3       # 每檔股票間的延遲,避免被限流
 # ------------------------
