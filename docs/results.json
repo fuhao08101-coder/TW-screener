@@ -1,0 +1,902 @@
+{
+  "generated_at": "2026-08-05 17:36:17",
+  "params": {
+    "lookback_days": 10,
+    "bias_ma": 15,
+    "bias_threshold": 20.0,
+    "long_ma": 87
+  },
+  "count": 89,
+  "results": [
+    {
+      "ticker": "7610.TW",
+      "name": "聯友金屬-創",
+      "close": 1595.0,
+      "ma87": 1257.99,
+      "bias_pct": -43.23,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8039.TW",
+      "name": "台虹",
+      "close": 220.0,
+      "ma87": 152.1,
+      "bias_pct": 41.62,
+      "bias_date": "2026-07-23",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6182.TWO",
+      "name": "合晶",
+      "close": 104.0,
+      "ma87": 88.57,
+      "bias_pct": -38.84,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6969.TW",
+      "name": "成信實業*-創",
+      "close": 34.1,
+      "ma87": 28.23,
+      "bias_pct": 38.7,
+      "bias_date": "2026-07-24",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3026.TW",
+      "name": "禾伸堂",
+      "close": 547.0,
+      "ma87": 535.32,
+      "bias_pct": -37.96,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3055.TW",
+      "name": "蔚華科",
+      "close": 112.0,
+      "ma87": 105.39,
+      "bias_pct": -37.91,
+      "bias_date": "2026-07-31",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3018.TW",
+      "name": "隆銘綠能",
+      "close": 14.05,
+      "ma87": 11.47,
+      "bias_pct": 35.65,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "4139.TWO",
+      "name": "馬光-KY",
+      "close": 40.5,
+      "ma87": 26.75,
+      "bias_pct": 35.61,
+      "bias_date": "2026-07-23",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6488.TWO",
+      "name": "環球晶",
+      "close": 872.0,
+      "ma87": 867.38,
+      "bias_pct": -34.96,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3532.TW",
+      "name": "台勝科",
+      "close": 316.5,
+      "ma87": 296.24,
+      "bias_pct": -33.83,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "4707.TWO",
+      "name": "磐亞",
+      "close": 30.85,
+      "ma87": 22.01,
+      "bias_pct": -33.21,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6505.TW",
+      "name": "台塑化",
+      "close": 67.6,
+      "ma87": 57.62,
+      "bias_pct": 32.11,
+      "bias_date": "2026-07-23",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "7828.TWO",
+      "name": "創新服務",
+      "close": 1750.0,
+      "ma87": 1597.54,
+      "bias_pct": -32.07,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "4442.TWO",
+      "name": "竣邦-KY",
+      "close": 53.1,
+      "ma87": 52.32,
+      "bias_pct": 31.35,
+      "bias_date": "2026-07-31",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "4556.TWO",
+      "name": "旭然",
+      "close": 84.5,
+      "ma87": 61.52,
+      "bias_pct": -30.04,
+      "bias_date": "2026-07-31",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "1718.TW",
+      "name": "中纖",
+      "close": 9.99,
+      "ma87": 9.14,
+      "bias_pct": -29.71,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "5483.TWO",
+      "name": "中美晶",
+      "close": 178.0,
+      "ma87": 163.39,
+      "bias_pct": -29.63,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6525.TW",
+      "name": "捷敏-KY",
+      "close": 135.0,
+      "ma87": 124.85,
+      "bias_pct": -29.43,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2483.TW",
+      "name": "百容",
+      "close": 38.55,
+      "ma87": 34.64,
+      "bias_pct": -29.19,
+      "bias_date": "2026-07-27",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3374.TWO",
+      "name": "精材",
+      "close": 313.0,
+      "ma87": 259.66,
+      "bias_pct": -29.13,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "4542.TWO",
+      "name": "科嶠",
+      "close": 306.5,
+      "ma87": 279.28,
+      "bias_pct": -28.91,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "7714.TWO",
+      "name": "創泓科技",
+      "close": 158.0,
+      "ma87": 138.85,
+      "bias_pct": -28.69,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6207.TWO",
+      "name": "雷科",
+      "close": 104.5,
+      "ma87": 103.14,
+      "bias_pct": -28.68,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3016.TW",
+      "name": "嘉晶",
+      "close": 104.0,
+      "ma87": 103.38,
+      "bias_pct": -28.42,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3441.TWO",
+      "name": "聯一光",
+      "close": 85.4,
+      "ma87": 57.17,
+      "bias_pct": 28.38,
+      "bias_date": "2026-08-03",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6834.TW",
+      "name": "天二科技",
+      "close": 91.2,
+      "ma87": 74.72,
+      "bias_pct": -28.31,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8033.TW",
+      "name": "雷虎",
+      "close": 189.0,
+      "ma87": 159.09,
+      "bias_pct": -28.15,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "4958.TW",
+      "name": "臻鼎-KY",
+      "close": 488.0,
+      "ma87": 463.78,
+      "bias_pct": -27.63,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "7795.TW",
+      "name": "長廣",
+      "close": 426.0,
+      "ma87": 420.82,
+      "bias_pct": -27.63,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3081.TWO",
+      "name": "聯亞",
+      "close": 2160.0,
+      "ma87": 2114.51,
+      "bias_pct": 27.61,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "8046.TW",
+      "name": "南電",
+      "close": 1060.0,
+      "ma87": 931.82,
+      "bias_pct": -27.52,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2491.TW",
+      "name": "吉祥全",
+      "close": 29.05,
+      "ma87": 26.39,
+      "bias_pct": -27.38,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6573.TW",
+      "name": "虹揚-KY",
+      "close": 17.65,
+      "ma87": 16.55,
+      "bias_pct": -27.35,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2303.TW",
+      "name": "聯電",
+      "close": 122.0,
+      "ma87": 116.78,
+      "bias_pct": -26.73,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "1515.TW",
+      "name": "力山",
+      "close": 30.9,
+      "ma87": 27.32,
+      "bias_pct": -26.69,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2434.TW",
+      "name": "統懋",
+      "close": 60.1,
+      "ma87": 42.13,
+      "bias_pct": -26.66,
+      "bias_date": "2026-08-03",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2493.TW",
+      "name": "揚博",
+      "close": 205.5,
+      "ma87": 184.24,
+      "bias_pct": -26.6,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6435.TWO",
+      "name": "大中",
+      "close": 255.0,
+      "ma87": 254.08,
+      "bias_pct": -26.54,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6907.TWO",
+      "name": "雅特力-KY",
+      "close": 177.5,
+      "ma87": 146.0,
+      "bias_pct": -26.39,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3489.TWO",
+      "name": "森寶",
+      "close": 25.9,
+      "ma87": 20.03,
+      "bias_pct": 26.13,
+      "bias_date": "2026-08-04",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6213.TW",
+      "name": "聯茂",
+      "close": 341.0,
+      "ma87": 284.34,
+      "bias_pct": -25.79,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8096.TWO",
+      "name": "擎亞",
+      "close": 129.5,
+      "ma87": 121.86,
+      "bias_pct": -25.72,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "1303.TW",
+      "name": "南亞",
+      "close": 177.0,
+      "ma87": 124.99,
+      "bias_pct": -25.71,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6202.TW",
+      "name": "盛群",
+      "close": 60.1,
+      "ma87": 58.31,
+      "bias_pct": -25.37,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "4534.TWO",
+      "name": "慶騰",
+      "close": 35.0,
+      "ma87": 29.47,
+      "bias_pct": -25.16,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "2344.TW",
+      "name": "華邦電",
+      "close": 169.0,
+      "ma87": 143.22,
+      "bias_pct": -24.71,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "5351.TWO",
+      "name": "鈺創",
+      "close": 96.5,
+      "ma87": 81.96,
+      "bias_pct": -24.51,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "4923.TWO",
+      "name": "力士",
+      "close": 46.3,
+      "ma87": 44.83,
+      "bias_pct": -24.26,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "2441.TW",
+      "name": "超豐",
+      "close": 118.5,
+      "ma87": 115.17,
+      "bias_pct": -24.1,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2455.TW",
+      "name": "全新",
+      "close": 388.0,
+      "ma87": 346.11,
+      "bias_pct": 24.08,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "7788.TW",
+      "name": "松川精密",
+      "close": 210.0,
+      "ma87": 205.64,
+      "bias_pct": -24.08,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6770.TW",
+      "name": "力積電",
+      "close": 66.1,
+      "ma87": 65.34,
+      "bias_pct": -23.91,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6672.TW",
+      "name": "騰輝電子-KY",
+      "close": 221.5,
+      "ma87": 218.87,
+      "bias_pct": -23.9,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8028.TW",
+      "name": "昇陽半導體",
+      "close": 282.0,
+      "ma87": 273.61,
+      "bias_pct": -23.74,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "4939.TWO",
+      "name": "亞電",
+      "close": 59.4,
+      "ma87": 50.65,
+      "bias_pct": -23.4,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6226.TW",
+      "name": "光鼎",
+      "close": 20.8,
+      "ma87": 16.08,
+      "bias_pct": -23.24,
+      "bias_date": "2026-07-23",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6166.TW",
+      "name": "凌華",
+      "close": 139.0,
+      "ma87": 114.0,
+      "bias_pct": 23.21,
+      "bias_date": "2026-07-24",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3498.TWO",
+      "name": "陽程",
+      "close": 113.0,
+      "ma87": 112.65,
+      "bias_pct": -23.21,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3450.TW",
+      "name": "聯鈞",
+      "close": 475.0,
+      "ma87": 433.39,
+      "bias_pct": -23.15,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3230.TWO",
+      "name": "錦明",
+      "close": 41.0,
+      "ma87": 37.95,
+      "bias_pct": -23.14,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6863.TW",
+      "name": "永道-KY",
+      "close": 135.0,
+      "ma87": 102.36,
+      "bias_pct": 23.12,
+      "bias_date": "2026-07-27",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8111.TWO",
+      "name": "立碁",
+      "close": 63.5,
+      "ma87": 60.62,
+      "bias_pct": 23.07,
+      "bias_date": "2026-07-27",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3653.TW",
+      "name": "健策",
+      "close": 4340.0,
+      "ma87": 3821.12,
+      "bias_pct": 23.01,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2923.TW",
+      "name": "鼎固-KY",
+      "close": 29.3,
+      "ma87": 26.1,
+      "bias_pct": 22.93,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2484.TW",
+      "name": "希華",
+      "close": 70.5,
+      "ma87": 57.52,
+      "bias_pct": -22.91,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8383.TWO",
+      "name": "千附",
+      "close": 71.0,
+      "ma87": 62.32,
+      "bias_pct": -22.68,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6414.TW",
+      "name": "樺漢",
+      "close": 469.0,
+      "ma87": 357.97,
+      "bias_pct": 22.67,
+      "bias_date": "2026-07-23",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3189.TW",
+      "name": "景碩",
+      "close": 828.0,
+      "ma87": 624.59,
+      "bias_pct": -22.61,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6141.TW",
+      "name": "柏承",
+      "close": 35.45,
+      "ma87": 34.24,
+      "bias_pct": -22.31,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6617.TWO",
+      "name": "共信-KY",
+      "close": 79.7,
+      "ma87": 75.17,
+      "bias_pct": -22.31,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6274.TWO",
+      "name": "台燿",
+      "close": 1470.0,
+      "ma87": 1332.5,
+      "bias_pct": -22.3,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3481.TW",
+      "name": "群創",
+      "close": 47.8,
+      "ma87": 44.61,
+      "bias_pct": -22.24,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "1617.TW",
+      "name": "榮星",
+      "close": 18.55,
+      "ma87": 16.71,
+      "bias_pct": -21.64,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "5227.TWO",
+      "name": "立凱-KY",
+      "close": 34.05,
+      "ma87": 28.39,
+      "bias_pct": 21.63,
+      "bias_date": "2026-07-27",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "5285.TW",
+      "name": "界霖",
+      "close": 77.4,
+      "ma87": 76.75,
+      "bias_pct": -21.52,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8071.TWO",
+      "name": "能率網通",
+      "close": 23.8,
+      "ma87": 22.13,
+      "bias_pct": -21.03,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3042.TW",
+      "name": "晶技",
+      "close": 177.0,
+      "ma87": 172.15,
+      "bias_pct": -20.98,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3360.TWO",
+      "name": "尚立",
+      "close": 16.3,
+      "ma87": 16.13,
+      "bias_pct": -20.84,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3711.TW",
+      "name": "日月光投控",
+      "close": 593.0,
+      "ma87": 557.67,
+      "bias_pct": -20.82,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2061.TWO",
+      "name": "風青",
+      "close": 55.2,
+      "ma87": 39.64,
+      "bias_pct": -20.79,
+      "bias_date": "2026-07-23",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "3006.TW",
+      "name": "晶豪科",
+      "close": 239.0,
+      "ma87": 206.21,
+      "bias_pct": -20.71,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2316.TW",
+      "name": "楠梓電",
+      "close": 159.5,
+      "ma87": 153.8,
+      "bias_pct": -20.57,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2408.TW",
+      "name": "南亞科",
+      "close": 445.0,
+      "ma87": 340.25,
+      "bias_pct": -20.52,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6223.TWO",
+      "name": "旺矽",
+      "close": 6245.0,
+      "ma87": 5683.61,
+      "bias_pct": -20.39,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "2243.TW",
+      "name": "宏旭-KY",
+      "close": 43.4,
+      "ma87": 35.94,
+      "bias_pct": -20.31,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "5345.TWO",
+      "name": "馥鴻",
+      "close": 24.15,
+      "ma87": 24.14,
+      "bias_pct": 20.19,
+      "bias_date": "2026-07-24",
+      "as_of": "2026-08-05",
+      "market": "TPEX"
+    },
+    {
+      "ticker": "6139.TW",
+      "name": "亞翔",
+      "close": 800.0,
+      "ma87": 761.08,
+      "bias_pct": -20.06,
+      "bias_date": "2026-07-30",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6116.TW",
+      "name": "彩晶",
+      "close": 14.2,
+      "ma87": 13.48,
+      "bias_pct": -20.05,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "7750.TW",
+      "name": "新代",
+      "close": 2460.0,
+      "ma87": 2159.94,
+      "bias_pct": 20.04,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-05",
+      "market": "TWSE"
+    }
+  ]
+}
