@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-06 15:26:00",
+  "generated_at": "2026-08-06 21:10:01",
   "history": [
     {
       "date": "2026-08-06",
-      "generated_at": "2026-08-06 15:26:00",
+      "generated_at": "2026-08-06 21:10:01",
       "params": {
         "lookback_days": 15,
         "bias_ma": 15,
@@ -13,7 +13,7 @@
         "second_ma": 284,
         "ma_alignment": true
       },
-      "count": 17,
+      "count": 16,
       "results": [
         {
           "ticker": "8039.TW",
@@ -102,17 +102,6 @@
           "bias_date": "2026-07-22",
           "as_of": "2026-08-06",
           "market": "TWSE"
-        },
-        {
-          "ticker": "8383.TWO",
-          "name": "千附",
-          "close": 71.7,
-          "ma87": 62.65,
-          "ma_second": 47.12,
-          "bias_pct": 27.12,
-          "bias_date": "2026-07-17",
-          "as_of": "2026-08-06",
-          "market": "TPEX"
         },
         {
           "ticker": "4556.TWO",
