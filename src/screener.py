@@ -2,8 +2,6 @@
 核心篩選邏輯:
   條件1:最近 N 個交易日內,曾出現「收盤價相對15MA乖離率 >= BIAS_THRESHOLD%」
   條件2:最新一根還原日K收盤價 > SMA87
-  條件3(剃除用):最近 MA87_BREACH_LOOKBACK 個還原日內，不得曾經跌破87MA
-               (只要有任一天收盤 < 87MA，整檔剃除)
 
 還原日K:使用 yfinance auto_adjust=True,會依除權息回推調整 OHLC。
 """
@@ -13,27 +11,20 @@ import pandas as pd
 import yfinance as yf
 
 # ------- 可調參數 -------
-LOOKBACK_DAYS = 10        # 「10個交易日內」(用於15MA乖離判斷)
+LOOKBACK_DAYS = 10        # 「10個交易日內」
 BIAS_MA_PERIOD = 15       # 15MA
 BIAS_THRESHOLD = 20.0     # 乖離 20%
 LONG_MA_PERIOD = 87       # SMA87
-BIAS_DIRECTION = "up"     # "up"=只抓正乖離(急漲) / "down"=只抓負乖離(急跌) / "both"=兩者都抓
-
-MA87_BREACH_LOOKBACK = 14  # 條件3：檢查最近幾個交易日內是否曾跌破87MA(依您這次訊息設為14)
-
-# 已經拿掉「兩年新高」濾網，不再需要抓5年資料，改回1年即可，抓取速度會比之前快
-HISTORY_PERIOD = "1y"
-REQUEST_SLEEP = 0.5       # 每檔股票間的延遲,避免被限流
+BIAS_DIRECTION = "up"   # "up"=只抓正乖離(急漲) / "down"=只抓負乖離(急跌) / "both"=兩者都抓
+HISTORY_PERIOD = "1y"     # 抓多久的歷史資料來算 MA(87MA需要至少87根+緩衝)
+REQUEST_SLEEP = 0.3       # 每檔股票間的延遲,避免被限流
 # ------------------------
-
-# 需要的最少歷史交易日數：87MA需要87天 + 檢查視窗 + 緩衝
-MIN_REQUIRED_ROWS = LONG_MA_PERIOD + MA87_BREACH_LOOKBACK + 10
 
 
 def fetch_history(ticker: str) -> pd.DataFrame | None:
     try:
         df = yf.Ticker(ticker).history(period=HISTORY_PERIOD, auto_adjust=True)
-        if df is None or df.empty or len(df) < MIN_REQUIRED_ROWS:
+        if df is None or df.empty or len(df) < LONG_MA_PERIOD + 5:
             return None
         return df
     except Exception:
@@ -51,7 +42,6 @@ def evaluate(ticker: str, name: str) -> dict | None:
     ma87 = close.rolling(LONG_MA_PERIOD).mean()
     bias = (close - ma15) / ma15 * 100.0
 
-    # ---- 條件1：近 LOOKBACK_DAYS 日內曾出現乖離 ----
     recent_bias = bias.tail(LOOKBACK_DAYS)
     if recent_bias.isna().all():
         return None
@@ -71,19 +61,10 @@ def evaluate(ticker: str, name: str) -> dict | None:
     if not hit:
         return None
 
-    # ---- 條件2：最新收盤 > 87MA ----
     latest_close = close.iloc[-1]
     latest_ma87 = ma87.iloc[-1]
     if pd.isna(latest_ma87) or latest_close <= latest_ma87:
         return None
-
-    # ---- 條件3(剃除)：近 MA87_BREACH_LOOKBACK 日內不得曾跌破87MA ----
-    recent_close_87 = close.tail(MA87_BREACH_LOOKBACK)
-    recent_ma87_check = ma87.tail(MA87_BREACH_LOOKBACK)
-    if recent_ma87_check.isna().any():
-        return None  # 87MA 資料不足以判斷，保守剃除
-    if (recent_close_87 < recent_ma87_check).any():
-        return None  # 近期曾跌破87MA，剃除
 
     trigger_date = recent_bias.idxmax() if trigger_val > 0 else recent_bias.idxmin()
 
@@ -113,4 +94,4 @@ def scan_universe(universe: list[dict], progress: bool = True) -> list[dict]:
             print(f"[warn] {row['ticker']} 失敗: {e}")
         time.sleep(REQUEST_SLEEP)
     results.sort(key=lambda r: abs(r["bias_pct"]), reverse=True)
-    return results
+    return results 
