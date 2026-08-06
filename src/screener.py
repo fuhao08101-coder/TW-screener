@@ -11,7 +11,7 @@ import pandas as pd
 import yfinance as yf
 
 # ------- 可調參數 -------
-LOOKBACK_DAYS = 10        # 「10個交易日內」
+LOOKBACK_DAYS = 15        # 「10個交易日內」
 BIAS_MA_PERIOD = 15       # 15MA
 BIAS_THRESHOLD = 20.0     # 乖離 20%
 LONG_MA_PERIOD = 87       # SMA87
