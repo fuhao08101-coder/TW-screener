@@ -94,7 +94,7 @@
 </main>
 
 <footer>
-  條件:近 N 交易日內 15MA 乖離觸及門檻,且還原日K收盤 &gt; SMA87<br>
+  條件:近 N 交易日內 15MA 乖離觸及門檻,收盤 &gt; SMA87,近期未跌破87MA,SMA87 &gt; 長期均線<br>
   資料源:公開行情,僅供研究參考,非投資建議
 </footer>
 
@@ -113,6 +113,8 @@ async function load(){
       <span class="chip">近${p.lookback_days}交易日</span>
       <span class="chip">${p.bias_ma}MA 乖離 ≥ ${p.bias_threshold}%</span>
       <span class="chip">收盤 &gt; SMA${p.long_ma}</span>
+      <span class="chip">近${p.ma87_breach_lookback}日未破87MA</span>
+      ${p.ma_alignment ? `<span class="chip">SMA${p.long_ma} &gt; SMA${p.second_ma}</span>` : ''}
     `;
 
     if(!data.results.length){
@@ -132,6 +134,7 @@ async function load(){
             <div class="meta">
               <span>收盤 <b>${r.close}</b></span>
               <span>SMA87 <b>${r.ma87}</b></span>
+              ${r.ma_second !== null ? `<span>SMA${p.second_ma} <b>${r.ma_second}</b></span>` : ''}
               <span>${r.market}</span>
             </div>
           </div>
