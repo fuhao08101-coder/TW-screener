@@ -1,11 +1,142 @@
 {
-  "generated_at": "2026-08-06 03:02:36",
+  "generated_at": "2026-08-06 10:02:02",
   "params": {
     "lookback_days": 10,
     "bias_ma": 15,
     "bias_threshold": 20.0,
     "long_ma": 87
   },
-  "count": 0,
-  "results": []
+  "count": 13,
+  "results": [
+    {
+      "ticker": "6969.TW",
+      "name": "成信實業*-創",
+      "close": 34.5,
+      "ma87": 28.29,
+      "bias_pct": 38.7,
+      "bias_date": "2026-07-24",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3018.TW",
+      "name": "隆銘綠能",
+      "close": 14.1,
+      "ma87": 11.5,
+      "bias_pct": 35.65,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "8039.TW",
+      "name": "台虹",
+      "close": 219.0,
+      "ma87": 153.36,
+      "bias_pct": 28.55,
+      "bias_date": "2026-07-24",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2455.TW",
+      "name": "全新",
+      "close": 386.5,
+      "ma87": 347.55,
+      "bias_pct": 24.08,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6805.TW",
+      "name": "富世達",
+      "close": 1760.0,
+      "ma87": 1737.13,
+      "bias_pct": 23.45,
+      "bias_date": "2026-08-06",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6166.TW",
+      "name": "凌華",
+      "close": 142.5,
+      "ma87": 114.98,
+      "bias_pct": 23.21,
+      "bias_date": "2026-07-24",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "6863.TW",
+      "name": "永道-KY",
+      "close": 136.0,
+      "ma87": 102.9,
+      "bias_pct": 23.12,
+      "bias_date": "2026-07-27",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3653.TW",
+      "name": "健策",
+      "close": 4255.0,
+      "ma87": 3824.9,
+      "bias_pct": 23.01,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2923.TW",
+      "name": "鼎固-KY",
+      "close": 29.1,
+      "ma87": 26.23,
+      "bias_pct": 22.93,
+      "bias_date": "2026-07-29",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3006.TW",
+      "name": "晶豪科",
+      "close": 248.5,
+      "ma87": 207.27,
+      "bias_pct": 22.45,
+      "bias_date": "2026-08-06",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "2464.TW",
+      "name": "盟立",
+      "close": 177.0,
+      "ma87": 137.36,
+      "bias_pct": 22.15,
+      "bias_date": "2026-08-06",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "3017.TW",
+      "name": "奇鋐",
+      "close": 2870.0,
+      "ma87": 2473.22,
+      "bias_pct": 20.74,
+      "bias_date": "2026-08-06",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    },
+    {
+      "ticker": "7750.TW",
+      "name": "新代",
+      "close": 2390.0,
+      "ma87": 2171.84,
+      "bias_pct": 20.04,
+      "bias_date": "2026-08-05",
+      "as_of": "2026-08-06",
+      "market": "TWSE"
+    }
+  ]
 }
