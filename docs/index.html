@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>大撈家 1.0</title>
+<title>大撈家 2.0</title>
 <style>
   :root{
     --bg:#0b0e11;
@@ -96,7 +96,7 @@
 
 <header>
   <div class="eyebrow"><span class="dot"></span><span id="status-text">連線中</span></div>
-  <h1>大撈家 1.0</h1>
+  <h1>大撈家 2.0</h1>
   <div class="sub" id="asof">最後更新:—</div>
   <div class="params" id="params"></div>
   <div class="day-tabs" id="day-tabs"></div>
@@ -131,8 +131,10 @@ function renderDay(idx){
     <span class="chip">收盤 &gt; SMA${p.long_ma}</span>
     <span class="chip">近${p.ma87_breach_lookback}日未破87MA</span>
     ${p.ma_alignment ? `<span class="chip">SMA${p.long_ma} &gt; SMA${p.second_ma}</span>` : ''}
+    ${p.require_atr_min ? `<span class="chip">ATR${p.atr_period} ≥ ${p.atr_min_threshold} 且 ≥ ${p.atr_min_pct_threshold}%</span>` : ''}
   `;
 
+  // 更新分頁標籤 active 狀態
   document.querySelectorAll('.day-tab').forEach((el, i) => {
     el.classList.toggle('active', i === idx);
   });
@@ -150,11 +152,15 @@ function renderDay(idx){
           <div class="ticker-row">
             <span class="ticker">${r.ticker.replace('.TW','').replace('.TWO','')}</span>
             <span class="name">${r.name}</span>
+            ${r.new_listing ? `<span class="chip" style="background:#3a2a12;border-color:#7a5a1a;color:#e0a83c;">🆕新股(${r.listed_days}日)</span>` : ''}
           </div>
           <div class="meta">
             <span>收盤 <b>${r.close}</b></span>
-            <span>SMA87 <b>${r.ma87}</b></span>
+            ${r.ma87 !== null && r.ma87 !== undefined ? `<span>SMA87 <b>${r.ma87}</b></span>` : ''}
             ${r.ma_second !== null && r.ma_second !== undefined ? `<span>SMA${p.second_ma} <b>${r.ma_second}</b></span>` : ''}
+            ${r.atr14 !== null && r.atr14 !== undefined ? `<span>ATR14 <b>${r.atr14}</b>(${r.atr14_pct}%)</span>` : ''}
+            ${r.revenue_mom_pct !== null && r.revenue_mom_pct !== undefined ? `<span>營收MoM <b style="color:${r.revenue_mom_pct>=0?'var(--up)':'var(--down)'}">${r.revenue_mom_pct>=0?'+':''}${r.revenue_mom_pct}%</b></span>` : ''}
+            ${r.revenue_yoy_pct !== null && r.revenue_yoy_pct !== undefined ? `<span>營收YoY <b style="color:${r.revenue_yoy_pct>=0?'var(--up)':'var(--down)'}">${r.revenue_yoy_pct>=0?'+':''}${r.revenue_yoy_pct}%</b></span>` : ''}
             <span>${r.market}</span>
           </div>
         </div>
@@ -189,7 +195,7 @@ async function load(){
       el.addEventListener('click', () => renderDay(parseInt(el.dataset.idx)));
     });
 
-    renderDay(0);
+    renderDay(0); // 預設顯示最新一天
 
   }catch(e){
     document.getElementById('status-text').textContent = '尚無資料';
