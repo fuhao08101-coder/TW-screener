@@ -150,7 +150,7 @@ function renderDay(idx){
       <div class="card">
         <div class="left">
           <div class="ticker-row">
-            <span class="ticker">${r.ticker.replace('.TW','').replace('.TWO','')}</span>
+            <span class="ticker">${r.ticker.replace('.TWO','').replace('.TW','')}</span>
             <span class="name">${r.name}</span>
             ${r.new_listing ? `<span class="chip" style="background:#3a2a12;border-color:#7a5a1a;color:#e0a83c;">🆕新股(${r.listed_days}日)</span>` : ''}
           </div>
