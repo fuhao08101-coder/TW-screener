@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from universe import get_universe
 from revenue import get_monthly_revenue
+from block_trade import check_batch
 from screener import (
     scan_universe,
     LOOKBACK_DAYS,
@@ -48,6 +49,17 @@ def load_existing_history() -> list[dict]:
 def main():
     print("抓取股票清單...")
     universe = get_universe(include_otc=True)
+
+    twse_count = sum(1 for r in universe if r["market"] == "TWSE")
+    tpex_count = sum(1 for r in universe if r["market"] == "TPEX")
+    print(f"上市: {twse_count} 檔, 上櫃: {tpex_count} 檔")
+
+    MIN_EXPECTED_TWSE = 500   # 正常應該有近千檔以上,低於這個數字視為異常
+    MIN_EXPECTED_TPEX = 300
+    if twse_count < MIN_EXPECTED_TWSE or tpex_count < MIN_EXPECTED_TPEX:
+        print(f"❌ 股票清單異常過少(上市{twse_count}檔/上櫃{tpex_count}檔),")
+        print(f"   判斷是這次外部資料源抓取失敗,放棄這次更新,保留前一天的結果,不寫入殘缺資料。")
+        return
     print(f"共 {len(universe)} 檔,開始掃描...")
 
     results = scan_universe(universe)
@@ -80,6 +92,16 @@ def main():
     for r in results:
         ind = r.get("industry")
         r["same_group_industry"] = ind if (ind and industry_counts.get(ind, 0) >= 2) else None
+
+    print("檢查近3個月鉅額交易紀錄(僅上市TWSE)...")
+    twse_codes = [
+        r["ticker"].replace(".TWO", "").replace(".TW", "")
+        for r in results if r["market"] == "TWSE"
+    ]
+    block_trade_map = check_batch(twse_codes)
+    for r in results:
+        code = r["ticker"].replace(".TWO", "").replace(".TW", "")
+        r["has_block_trade"] = block_trade_map.get(code)  # True/False/None(上櫃或查詢失敗)
 
     tz = timezone(timedelta(hours=8))
     now = datetime.now(tz)
