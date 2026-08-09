@@ -62,12 +62,24 @@ def main():
         rev = revenue_map.get(code)
         if rev:
             r["revenue_month"] = rev["month"]
+            r["industry"] = rev.get("industry")
             r["revenue_mom_pct"] = round(rev["mom_pct"], 2) if rev["mom_pct"] is not None else None
             r["revenue_yoy_pct"] = round(rev["yoy_pct"], 2) if rev["yoy_pct"] is not None else None
         else:
             r["revenue_month"] = None
+            r["industry"] = None
             r["revenue_mom_pct"] = None
             r["revenue_yoy_pct"] = None
+
+    # 同族群標籤:今天篩出來的結果裡,只要同一個「產業別」出現2次以上,就標記出來
+    industry_counts = {}
+    for r in results:
+        ind = r.get("industry")
+        if ind:
+            industry_counts[ind] = industry_counts.get(ind, 0) + 1
+    for r in results:
+        ind = r.get("industry")
+        r["same_group_industry"] = ind if (ind and industry_counts.get(ind, 0) >= 2) else None
 
     tz = timezone(timedelta(hours=8))
     now = datetime.now(tz)
