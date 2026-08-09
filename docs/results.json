@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-09 18:56:56",
+  "generated_at": "2026-08-09 19:42:31",
   "history": [
     {
       "date": "2026-08-09",
-      "generated_at": "2026-08-09 18:56:56",
+      "generated_at": "2026-08-09 19:42:31",
       "params": {
         "lookback_days": 30,
         "bias_ma": 15,
@@ -35,7 +35,8 @@
           "industry": "電子零組件業",
           "revenue_mom_pct": -8.66,
           "revenue_yoy_pct": -6.57,
-          "same_group_industry": "電子零組件業"
+          "same_group_industry": "電子零組件業",
+          "has_block_trade": false
         },
         {
           "ticker": "1303.TW",
@@ -53,7 +54,8 @@
           "industry": "塑膠工業",
           "revenue_mom_pct": -5.88,
           "revenue_yoy_pct": 31.79,
-          "same_group_industry": null
+          "same_group_industry": null,
+          "has_block_trade": true
         },
         {
           "ticker": "6907.TWO",
@@ -73,7 +75,8 @@
           "industry": "半導體業",
           "revenue_mom_pct": 20.12,
           "revenue_yoy_pct": 113.56,
-          "same_group_industry": null
+          "same_group_industry": null,
+          "has_block_trade": null
         },
         {
           "ticker": "2059.TW",
@@ -91,7 +94,8 @@
           "industry": "電子零組件業",
           "revenue_mom_pct": 17.18,
           "revenue_yoy_pct": 220.52,
-          "same_group_industry": "電子零組件業"
+          "same_group_industry": "電子零組件業",
+          "has_block_trade": true
         },
         {
           "ticker": "2645.TW",
@@ -109,7 +113,8 @@
           "industry": "航運業",
           "revenue_mom_pct": 8.08,
           "revenue_yoy_pct": 13.01,
-          "same_group_industry": null
+          "same_group_industry": null,
+          "has_block_trade": false
         },
         {
           "ticker": "6446.TW",
@@ -127,7 +132,8 @@
           "industry": "生技醫療業",
           "revenue_mom_pct": -5.11,
           "revenue_yoy_pct": 94.88,
-          "same_group_industry": null
+          "same_group_industry": null,
+          "has_block_trade": true
         },
         {
           "ticker": "6166.TW",
@@ -145,7 +151,8 @@
           "industry": "電腦及週邊設備業",
           "revenue_mom_pct": 4.71,
           "revenue_yoy_pct": 25.89,
-          "same_group_industry": "電腦及週邊設備業"
+          "same_group_industry": "電腦及週邊設備業",
+          "has_block_trade": false
         },
         {
           "ticker": "6414.TW",
@@ -163,7 +170,8 @@
           "industry": "電腦及週邊設備業",
           "revenue_mom_pct": 13.36,
           "revenue_yoy_pct": 56.97,
-          "same_group_industry": "電腦及週邊設備業"
+          "same_group_industry": "電腦及週邊設備業",
+          "has_block_trade": false
         },
         {
           "ticker": "6538.TWO",
@@ -181,7 +189,8 @@
           "industry": "電子零組件業",
           "revenue_mom_pct": 12.21,
           "revenue_yoy_pct": 46.5,
-          "same_group_industry": "電子零組件業"
+          "same_group_industry": "電子零組件業",
+          "has_block_trade": null
         },
         {
           "ticker": "6957.TW",
@@ -199,7 +208,8 @@
           "industry": "其他",
           "revenue_mom_pct": 35.17,
           "revenue_yoy_pct": 33.53,
-          "same_group_industry": null
+          "same_group_industry": null,
+          "has_block_trade": false
         }
       ]
     },
