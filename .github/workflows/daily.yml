@@ -1,9 +1,7 @@
 name: Daily TW Stock Screener
 
 on:
-  schedule:
-    # 台北時間 17:00 (=UTC 09:00),留更充分時間讓資料源(yfinance)完整更新當日收盤資料
-    - cron: "0 9 * * 1-5"
+ 
   workflow_dispatch: {}   # 允許手動在 GitHub 網頁上按「Run workflow」測試
 
 permissions:
